@@ -1,15 +1,15 @@
 let btn=document.querySelector('#btn');
 //reading the data from the first textarea
 function getData(){
-	let Check = true;
+	let check = true;
 	let input = document.getElementById('inputarea').value.trim().split(',').map(elem=>parseInt(elem));
 	input.forEach(function(elem){
 		if(isNaN(elem)){
 			alert("Array contains non number elements");
 			document.getElementById('inputarea').value="";
-			Check = false;
+			check = false;
 		}
-		if(Check==false){
+		if(check==false){
 			input = undefined;
 		}
 	});
